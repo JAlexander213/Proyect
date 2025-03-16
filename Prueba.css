@@ -1,0 +1,592 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pagina1 {
+    background-color: black !important;
+}
+
+.pagina2 {
+    background: linear-gradient(to right, #000000, #8c12f0, rgb(248, 134, 40));
+    height: 100vh;
+    margin: 0;
+}
+
+.pagina3 {
+    background: linear-gradient(to right, #000000, rgb(173, 6, 214), #f712e4); 
+    height: 100vh;
+    margin: 0;
+}
+.pagEco{
+    background: linear-gradient(to right, #000000, rgb(48, 60, 226), #416bf5); 
+    height: 100vh;
+    margin: 0;
+}
+.pagSalud{
+    background: linear-gradient(to right, #000000, rgb(230, 39, 39), #f17d30); 
+    height: 100vh;
+    margin: 0;
+}
+.pagEI{
+    background: linear-gradient(to right, #000000, rgb(19, 252, 89), #42e686); 
+    height: 100vh;
+    margin: 0;
+}
+.pagExpulsar {
+    background: linear-gradient(to right, #000000, #1c0131, rgb(54, 7, 85), #530b8a, #a70b4c, #be0753);
+    height: 100vh;
+    margin: 0;
+}
+
+.ImagenLogo {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vwh;
+    min-height: 100vwh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.logoEco {
+    width: 100vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10%;
+    background-color: transparent; /*elimina fondo blanco*/
+    transform: scale(1.2);
+    opacity: 0;
+    animation: zoomIn 1.2s ease-out forwards;
+}
+
+.ImagenLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botones */
+#btnIngresar, #btnEjemplo, #btnEjemplo2, #btnSalud, #btnEI, #btnExpulsar, #btnExpulsarN {
+    position: absolute;
+    padding: 10px 20px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#btnIngresar {
+    left: 45%;
+    top: 900px;
+    background-color: #ff12a4;
+    color: white;
+    animation: neon-glow-btn 1.5s infinite alternate;
+}
+
+/* Hover (cuando el mouse pasa por encima) */
+#btnIngresar:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0bfff3, 0 0 30px #00ffff;
+}
+
+/* Active (cuando el botón es presionado) */
+#btnIngresar:active {
+    background-color: #ffffff;
+    transform: scale(0.95);
+    box-shadow: 0 0 5px #00408a, 0 0 15px #00408a;
+}
+
+/* Brillo Neon */
+@keyframes neon-glow-btn {
+    0% { box-shadow: 0 0 5px #24c3eb; }
+    50% { box-shadow: 0 0 15px #24c3eb, 0 0 30px #24c3eb; }
+    100% { box-shadow: 0 0 5px #24c3eb; }
+}
+
+
+#btnEjemplo {
+    left: auto;
+    top: 10px;
+    right: 10px;
+    background-color: #ffee00;
+    color: white;
+}
+
+#btnEjemplo:hover {
+    background-color: #f5980d;
+    transform: scale(1.1);
+}
+
+#btnEjemplo:active {
+    background-color: #430650;
+    transform: scale(0.95);
+}
+
+#btnEjemplo2 {
+    left: 45%;
+    background-color: #7009c5;
+    color: white;
+    top: 500px;
+}
+
+#btnEjemplo2:hover {
+    background-color: #f11c80;
+    transform: scale(1.1);
+}
+
+#btnEjemplo2:active {
+    background-color: #00408a;
+    transform: scale(0.95);
+}
+
+p,summary, .Texto {
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    opacity: 0;
+    animation: fadeInText 1.3s ease-in-out forwards;
+}
+
+.Texto {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+}
+.parrafoEjemplo {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+a {
+    text-decoration: none; /* Eliminar el subrayado */
+}
+
+.enlaces {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.pg1, .pg2, .pg3 {
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.pg1::after, .pg2::after, .pg3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.pg1:hover::after, .pg2:hover::after, .pg3:hover::after {
+    transform: scaleX(1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.Bienvenida {
+    color: azure;
+    position: absolute;
+    text-align: center;
+    left: 28%;
+    top: 400px;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 2;
+    transform: scale(1.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: -150px 0 20px;
+    opacity: 0;
+    animation: zoomIn 1.2s ease-out forwards;
+}
+.BienEco {
+    color: azure;
+    position: absolute;
+    text-align: center;
+    top: 400px;
+    left: 28%;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 2;
+    transform: scale(1.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: -150px 0 20px;
+    opacity: 0;
+    animation: zoomIn 1.2s ease-out forwards;
+}
+ul, .TextoEco{
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    opacity: 0;
+    animation: fadeInText 1.3s ease-in-out forwards;
+}
+ul, .TextoEco{
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+}
+#btnEco {
+    left: auto;
+    top: 10px;
+    right: 10px;
+    background-color: #17ffcd;
+    color: white;
+    position: absolute;
+    padding: 10px 20px;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#btnEco:hover {
+    background-color: #ff00ea;
+    transform: scale(1.1);
+}
+
+#btnEco:active {
+    background-color: #00408a;
+    transform: scale(0.95);
+}
+.MarinoEco{
+    width: 100vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10%;
+    background-color: transparent; /*elimina fondo blanco*/
+    transform: scale(1.2);
+    opacity: 0;
+    animation: zoomIn 1.2s ease-out forwards;
+}
+.fotoInstagram {
+    position: fixed; /* Lo fija en la parte superior izquierda */
+    top: 20px;
+    left: 20px;
+    width: 60px; /* Tamaño pequeño */
+    height: 60px; /* Tamaño pequeño */
+    overflow: hidden;
+    border-radius: 20%; /* Hacemos el borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos para la imagen dentro del recuadro */
+.fotoRedes {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #12ffdf;
+    color: white;
+    animation: neon-glow-btn 1.5s infinite alternate; /* Hace que la imagen se ajuste al recuadro sin distorsión */
+}
+
+/* Efectos dinámicos */
+.fotoInstagram:hover {
+    transform: scale(1.1); /* Efecto de ampliación */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+/* Animación en la carga de la página */
+@keyframes entrada {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fotoInstagram {
+    animation: entrada 1s ease-out;
+}
+
+.fotoInstagram {
+    background-color: #ff12a4;
+    animation: neon-glow-btn 1.5s infinite alternate;
+}
+
+/* Hover (cuando el mouse pasa por encima) */
+.fotoInstagram:hover {
+    background-color: #000000;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #f11c80, 0 0 30px #f11c80;
+}
+
+.fotoInstagram:active {
+    background-color: #ffffff;
+    transform: scale(0.95);
+    box-shadow: 0 0 5px #ff12a4, 0 0 15px #ff12a4;
+}
+
+@keyframes neon-glow-btn {
+    0% { box-shadow: 0 0 5px #ff12a4; }
+    50% { box-shadow: 0 0 15px #ff12a4, 0 0 30px #ff12a4; }
+    100% { box-shadow: 0 0 5px #ff12a4; }
+}
+.redes{
+    position: absolute;
+    top: 40px;
+    left: 95px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.parrafoEjemplo{
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+}
+.BienSalud{
+        color: azure;
+        position: absolute;
+        text-align: center;
+        top: 400px;
+        left: 32%;
+        font-size: 4rem;
+        font-weight: bold;
+        z-index: 2;
+        transform: scale(1.2);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: -150px 0 20px;
+        opacity: 0;
+        animation: zoomIn 1.2s ease-out forwards;
+}
+#btnSalud {
+    left: auto;
+    top: 10px;
+    right: 10px;
+    background-color: #f71c1c;
+    color: white;
+}
+
+#btnSalud:hover {
+    background-color: #fffb00;
+    transform: scale(1.1);
+}
+
+#btnSalud:active {
+    background-color: #000000;
+    transform: scale(0.95);
+}
+
+.BienEI{
+    color: azure;
+    position: absolute;
+    text-align: center;
+    top: 400px;
+    left: 32%;
+    font-size: 4rem;
+    font-weight: bold;
+    z-index: 2;
+    transform: scale(1.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: -150px 0 20px;
+    opacity: 0;
+    animation: zoomIn 1.2s ease-out forwards;
+}
+#btnEI {
+left: auto;
+top: 10px;
+right: 10px;
+background-color: #14f326;
+color: white;
+}
+
+#btnEI:hover {
+background-color: #1a754f;
+transform: scale(1.1);
+}
+
+#btnEI:active {
+background-color: #000000;
+transform: scale(0.95);
+}  
+.detalles{
+    position: absolute;
+    top: 70px;
+    left: 95px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.queja{
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    opacity: 0;
+    animation: fadeInText 1.3s ease-in-out forwards;
+}
+.decision{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: normal;
+    font-style: oblique;
+    background: linear-gradient(to right, #eeeeee, #f80d40, rgb(241, 33, 179), #f0a314);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 65px;
+    letter-spacing: 6px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeInText 1.3s ease-in-out forwards;
+}
+
+#btnExpulsar {
+    position: relative;
+    top: 190px;
+    left: 250px;
+    background-color: #40e031;
+    color: white;
+    width: 300px;
+    height: 150px;
+    font-size: 100px;
+}
+
+#btnExpulsar:hover {
+    background-color: #0f9b16;
+    transform: scale(1.2);
+}
+
+#btnExpulsar:active {
+    background-color: #000000;
+    transform: scale(0.95);
+}
+
+#btnExpulsarN {
+    position: relative;
+    top: 190px;
+    left: 500px;
+    background-color: #ff0000;
+    color: white;
+    width: 300px;
+    height: 150px;
+    font-size: 100px; 
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#btnExpulsarN:hover {
+    background-color: #830d0d;
+    transform: scale(1.2);
+}
+
+#btnExpulsarN:active {
+    background-color: #030003;
+    transform: scale(0.95);
+}

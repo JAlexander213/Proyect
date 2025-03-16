@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expulsar</title>
+    <link rel="stylesheet" href="Prueba.css">
+</head>
+<body class="pagExpulsar">
+    <h1 class="decision">
+        ¿DESEA EXPULSAR A DIEGO RAMIREZ ROQUE DEL EQUIPO?
+    </h1>
+    <input type="button" value="SI" onclick="expulsar();" id="btnExpulsar">
+    <input type="button" value="NO" id="btnExpulsarN">
+    <script>
+        function expulsar() {
+            alert('Expulsado');
+            window.location.replace("https://www.google.com"); /*evita que regrese*/
+        }
+    </script>    
+</body>
+</html>
